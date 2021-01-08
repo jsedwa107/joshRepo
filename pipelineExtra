@@ -1,0 +1,16 @@
+stage('Clone repository') {
+    node ('master') {
+    git branch: '*/main', url: 'https://github.com/jsedwa107/joshRepo.git'
+    }
+ }
+    stage('Create file') {
+        sh 'touch NewFile'
+    }
+    stage('Write') {
+        sh 'echo "This is a message" > NewFile'
+    }
+    stage('Print') {
+        sh 'cat NewFile'
+    }
+ }
+  
