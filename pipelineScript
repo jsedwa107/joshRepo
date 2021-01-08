@@ -6,6 +6,6 @@ node {
         sh 'echo "This is a message" > NewFile'
     }
     stage('Print') {
-        sh 'Cat NewFile'
+        sh 'cat NewFile'
     }
  }
